@@ -21,3 +21,8 @@ app.get("/partners/emails", (request, response) => {
     const emails = PartnersController.getEmailsOfCertifiedPartners();
     response.json(emails);
 });
+
+app.get("/partners/credits500", (request, response) => {
+    const partnersAbove500 = PartnersController.getPartnersAbove500();
+    response.json(partnersAbove500);
+});
