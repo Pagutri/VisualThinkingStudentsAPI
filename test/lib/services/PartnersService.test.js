@@ -37,4 +37,10 @@ describe("Tests for PartnersService", () => {
         const partnersEmails = PartnersService.emailsOfCertifiedPartners(partners);
         expect(partnersEmails).toStrictEqual(["Todd@visualpartnership.xyz", "Sexton@visualpartnership.xyz"]);
     });
+
+    test("3. Get the list of partners with more than 500 credits", () => {
+        const partners = Reader.readJsonFile("test/lib/utils/Reader_testfile.json");
+        const partnersAbove500 = PartnersService.partnersAbove500(partners);
+        expect(partnersAbove500.length).toBe(2);
+    });
 });
