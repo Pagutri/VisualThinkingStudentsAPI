@@ -3,7 +3,7 @@ const PartnersController = require("../../../app/lib/controllers/PartnersControl
 describe("Tests for PartnersController", () => {
     test("1. Test for getPartners", () => {
         const partners = PartnersController.getPartners();
-        expect(partners[0]).toBe({
+        expect(partners[0]).toStrictEqual({
               "id": "6264d5d89f1df827eb84bb23",
               "name": "Warren",
               "email": "Todd@visualpartnership.xyz",
