@@ -11,3 +11,8 @@ app.get("/", (request, response) => {
 app.listen(port, () => {
     console.log(`VisualThinkingStudents API in localhost:${port}`);
 });
+
+app.get("/partners", (request, response) => {
+    const partners = PartnersController.getPartners();
+    response.json(partners);
+});
