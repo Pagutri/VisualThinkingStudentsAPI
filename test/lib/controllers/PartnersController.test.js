@@ -22,4 +22,10 @@ describe("Tests for PartnersController", () => {
         expect(partners[0]).toBe("Todd@visualpartnership.xyz");
         expect(partners.length).toBe(29);
     });
+
+    test("3. Test for getPartnersAbove500", () => {
+        const partners = PartnersController.getPartnersAbove500();
+        expect(partners[26].name).toBe("Ware");
+        expect(partners.length).toBe(27);
+    });
 });
