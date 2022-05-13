@@ -16,4 +16,10 @@ describe("Tests for PartnersController", () => {
             "haveCertification": true
         });
     });
+
+    test("2. Test for getEmailsOfCertifiedPartners", () => {
+        const partners = PartnersController.getEmailsOfCertifiedPartners();
+        expect(partners[0]).toBe("Todd@visualpartnership.xyz");
+        expect(partners.length).toBe(29);
+    });
 });
