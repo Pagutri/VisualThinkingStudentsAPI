@@ -31,4 +31,10 @@ describe("Tests for PartnersService", () => {
             }
         ]);
     });
+
+    test("2. Get the list of emails of partners with certification", () => {
+        const partners = Reader.readJsonFile("test/lib/utils/Reader_testfile.json");
+        const partnersEmails = PartnersService.emailsOfCertifiedPartners(partners);
+        expect(partnersEmails).toStrictEqual(["Todd@visualpartnership.xyz", "Sexton@visualpartnership.xyz"]);
+    });
 });
