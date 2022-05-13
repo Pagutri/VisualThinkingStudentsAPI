@@ -11,6 +11,11 @@ class PartnersController {
         const partners = Reader.readJsonFile("visualpartners.json");
         return PartnersService.emailsOfCertifiedPartners(partners);
     }
+
+    static getPartnersAbove500() {
+        const partners = Reader.readJsonFile("visualpartners.json");
+        return PartnersService.partnersAbove500(partners);
+    }
 }
 
 module.exports = PartnersController;
