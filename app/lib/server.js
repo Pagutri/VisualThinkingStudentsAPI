@@ -16,3 +16,8 @@ app.get("/partners", (request, response) => {
     const partners = PartnersController.getPartners();
     response.json(partners);
 });
+
+app.get("/partners/emails", (request, response) => {
+    const emails = PartnersController.getEmailsOfCertifiedPartners();
+    response.json(emails);
+});
