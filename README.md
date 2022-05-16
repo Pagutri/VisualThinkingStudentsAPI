@@ -3,7 +3,7 @@
 API que lee la información de los estudiantes (partners) inscritos en los cursos
 de Visual Thinking cuyos datos se encuentran en visualpartners.json
 
-Explico cómo desarrollé este proyecto paso a paso desde la instalación de las
+Explico cómo instalar las
 dependencias [en esta entrada de mi blog](https://pagutri.github.io/my_launchx_blog/posts/post_07/).
 
 ## Dependencias
